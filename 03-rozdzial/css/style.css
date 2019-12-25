@@ -1,0 +1,13 @@
+body { 
+    background-color: aquamarine;
+}
+
+* {
+    color: saddlebrown;
+}
+
+h1 {
+    margin-top: 50px;
+    text-align: center;
+    padding: 100px;
+}

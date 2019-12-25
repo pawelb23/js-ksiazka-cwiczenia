@@ -1,0 +1,12 @@
+body {    
+    background-color: rgba(0, 167, 255, 0.3);    
+}
+
+h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+}
+

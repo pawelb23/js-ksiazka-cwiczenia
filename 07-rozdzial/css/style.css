@@ -1,0 +1,30 @@
+body {
+    
+    background-color: #613680;
+    
+}
+
+header {
+    
+/*    position: absolute;*/
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 25px;
+    border: 5px solid black;
+/*    top: 150px;*/
+/*    width: 200px;*/
+/*    height: 100px;*/
+    background-color: antiquewhite;
+    
+}
+
+div#message {
+    
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    
+}
