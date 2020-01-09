@@ -235,6 +235,12 @@ for (var i = 0; i < emot.length; i++) {
 
 }
 
+console.log(emot);
+
+console.log('')
+
+console.log('Hugs --- ' + hugs + '\n' + 'Kisses --- ' + kisses)
+
 //=======================================
 console.log("");
 
@@ -600,6 +606,8 @@ function testerFunction() {
 
     console.log("TEST, TEST, TEST, Wcisnąłeś jeden - 1");
 
+    console.log('');
+
     var information = false;
 
     if (information === false) {
@@ -612,15 +620,15 @@ function testerFunction() {
 
         var text = prompt("Ponownie powtarzam, wciśnij cyfrę jeden");
 
-         information === true;
-        
+        information === false;
+
         console.log(text);
 
     }
 
     if (text == 1) {
 
-        console.log(text);
+        //        console.log(text);
 
         information === true;
 
