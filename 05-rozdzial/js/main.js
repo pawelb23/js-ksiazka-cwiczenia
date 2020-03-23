@@ -22,7 +22,7 @@ if (miles < 2000) {
 
 } else {
 
-    console.log("Samochód przejechał - " + miles + "!!!");
+    console.log("Samochód przejechał - " + miles + "mil!!!");
 
 }
 

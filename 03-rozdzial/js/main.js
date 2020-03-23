@@ -5,7 +5,7 @@ console.log("Rozdział III - ćwiczenia");
 
 
 function doIt(param) {
-    
+
     param = 2;
 }
 
@@ -61,10 +61,10 @@ function bake(degrees) {
     } else {
 
         message = "To odpowiednia temperatura dla mnie. <br><br>";
-//        
-//                setMode("pieczenie");
-//        
-//                setTemp(degrees);
+        //        
+        //                setMode("pieczenie");
+        //        
+        //                setTemp(degrees);
     }
 
     return message;
@@ -130,17 +130,17 @@ console.log(Math.PI);
 function clunk(times) {
 
     var num = times;
-    
-//console.log("test times/num --- " + times);
-    
+
+    //console.log("test times/num --- " + times);
+
     while (num > 0) {
 
         display("brzęk!");
 
         num = num - 1;
-//        console.log(clunkCounter);
-//console.log("test num --- " + num);
-//          Dwa powyższe console.log-i zadziałają tylko jeżeli wejdziemy do funkcji,                czyli jeżeli warunki, aby uruchomić funkcję zostaną spełnione
+        //        console.log(clunkCounter);
+        //console.log("test num --- " + num);
+        //          Dwa powyższe console.log-i zadziałają tylko jeżeli wejdziemy do funkcji,                czyli jeżeli warunki, aby uruchomić funkcję zostaną spełnione
     }
 }
 
@@ -158,7 +158,7 @@ function kodoskryptoinator(size) {
     } else if (size == 1) {
 
         display("biiip!");
-        
+
     } else {
 
         while (size > 1) {
@@ -188,9 +188,9 @@ function display(output) {
     console.log(output);
 
     clunkCounter = clunkCounter + 1;
-    
+
     console.log("test clunkCounter --- " + clunkCounter);
-    
+
 }
 
 var clunkCounter = 0;
@@ -235,7 +235,7 @@ silnia(6);
 
 //==============================================
 
-var info = false;//użyte w pierwszej funkcji (do drugiej jest osobna zmienna gdyż ta zmienna może zmienić wartość na true!!!)
+var info = false; //użyte w pierwszej funkcji (do drugiej jest osobna zmienna gdyż ta zmienna może zmienić wartość na true!!!)
 
 function speak(kind) {
 
@@ -252,7 +252,7 @@ function speak(kind) {
         alert("Miau");
 
         alert("Gratuluję! Dobra odpowiedź, możesz wejść na stronę!!! :)");
-        
+
     } else {
 
         alert(defaultSound);
@@ -265,7 +265,7 @@ function speak(kind) {
 
             console.log(text);
 
-//            var defaultSound = "EEEtam, pies albo kot to są zwierzęta :)"; //wprowadzamy zmienną (działa jak w każdym innym przypadku, równie dobrze mogła by być po za funkcją)
+            //            var defaultSound = "EEEtam, pies albo kot to są zwierzęta :)"; //wprowadzamy zmienną (działa jak w każdym innym przypadku, równie dobrze mogła by być po za funkcją)
 
             if (text == "pies" || text == "PIES" || text == "Pies") {
 
@@ -318,7 +318,7 @@ console.log(info);
 
 while (infoDwa == false) {
 
-  var petDwa = prompt("Podaj rodzaj zwierzaka (drugie ćwiczenie - więc drugi raz!!!):"); //całe wyrażenie musi tu być wpisane w funkcję (aby prompt był zawsze czysty po przeładowaniu), jeżeli nie wpiszemy całości (jak rozumiem),  tylko wpisalibyśmy tylko pet --- funkcja przypisuje jej po pierwszym razie już wartość (którą wpiszemy), która jeżeli nie podamy prawidłowej odpowiedzi jest błędna i dlatego tworzy się pętla, której nie możemy przerwać. Można to sprawdzić z użyciem console.log
+    var petDwa = prompt("Podaj rodzaj zwierzaka (drugie ćwiczenie - więc drugi raz!!!):"); //całe wyrażenie musi tu być wpisane w funkcję (aby prompt był zawsze czysty po przeładowaniu), jeżeli nie wpiszemy całości (jak rozumiem),  tylko wpisalibyśmy tylko pet --- funkcja przypisuje jej po pierwszym razie już wartość (którą wpiszemy), która jeżeli nie podamy prawidłowej odpowiedzi jest błędna i dlatego tworzy się pętla, której nie możemy przerwać. Można to sprawdzić z użyciem console.log
 
     console.log(pet);
 
@@ -331,7 +331,7 @@ while (infoDwa == false) {
         alert("Hau");
 
         alert("Gratuluję! Dobra odpowiedź, możesz wejść na stronę!!! :)");
-        
+
     } else if (petDwa == "kot" || petDwa == "KOT" || petDwa == "Kot") {
 
         infoDwa = true;
@@ -356,14 +356,20 @@ while (infoDwa == false) {
     }
 }
 
+console.log(``);
+
 //============================================================
 
 function doIt(param) {
-param = 2;
-    
-    console.log(test);
+
+    console.log(param); //tutaj param przyjmuje wartość - 1 (od zmiennej test)
+    param = 2; // tutaj nadpisujemy wartość dla zmiennej param, więc teraz wynosi ona 2
+    console.log(test); // tutaj wyświetlamy wartość zmiennej globalnej, która dalej jest równa 1
+    return param; //zwracamy param, który po ostatnim przypisaniu wartości wynosi 2
+    // Po returnie już dalej nic się nie stanie w funkcji
+
 }
 
 var test = 1;
-doIt(test);
-console.log(test);
+console.log(doIt(test)); // otrzymamy 2 bo to wartość z return 
+console.log(test); // wartość zmiennej globalnej test dalej wynosi 1
