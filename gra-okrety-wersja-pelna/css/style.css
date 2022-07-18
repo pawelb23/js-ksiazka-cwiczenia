@@ -1,72 +1,60 @@
 body {
-
     background-color: rgba(18, 17, 17, 0.9);
-
 }
 
 div#board {
-
     position: relative;
     width: 1024px;
     height: 863px;
     margin: auto;
     background-image: url(../img/board.jpg);
     background-repeat: no-repeat;
-
 }
 
 div#messageArea {
-
     position: absolute;
     top: 5px;
     left: 10px;
     color: rgba(83, 175, 19, 0.8);
     font-size: 2em;
     font-family: fantasy;
-
+    /* font-family: 'Fascinate', cursive; */
 }
 
 table {
-
     position: absolute;
     left: 173px;
     top: 98px;
     border-spacing: 0px;
-    /*   border-spacing ustala przestrzeń sprawdzić na W3school*/
+    /*   border-spacing ustala przestrzeń (W3school)*/
 }
 
 td {
-
-    width: 94px;
-    height: 94px;
-
+    border: 1px solid red;
+    /* początkowo width i height miały po 94px */
+    width: 92px;
+    height: 93px;
 }
 
 .hit {
-
     background-image: url(../img/ship.png);
     background-repeat: no-repeat;
     background-position: center;
-
 }
 
 .miss {
-
     background-image: url(../img/miss.png);
     background-repeat: no-repeat;
     background-position: center;
-
 }
 
 form {
-
     position: absolute;
     bottom: 0px;
     right: 0px;
     padding: 15px;
     background-color: rgba(83, 175, 19, 0.7);
     border-radius: 5px;
-
 }
 
 form input {

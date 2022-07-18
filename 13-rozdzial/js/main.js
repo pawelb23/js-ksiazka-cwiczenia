@@ -15,13 +15,17 @@
 
     Dog.prototype.species = "Psowate";
 
-    //Dog.prototype.species Zacznij od konstruktora Dog, następnie pobierz jego właściwość prototype, będącą referencją do obiektu, który ma mieć właściwość species. Referencja – wartość, która zawiera informacje o położeniu innej wartości w pamięci lub nośniku danych. Instancja (z łac. instantia) – pojedyncze wystąpienie niezależnego kodu zgodnego z danym wzorcem. Najpopularniejszym przykładem jest instancjonowanie klas w programowaniu obiektowym [ważne pamiętajmy, że przykład ten raczej nie dotyczy to JS], czyli tworzenie obiektów (niezależnych bytów danej klasy, zajmujących określone miejsce w pamięci). Innym przykładem jest instancja danego programu, czyli wystąpienie w pamięci komputera aktualnie wykonywanej sekwencji kodu komputerowego – utworzenie procesu. 
+    // Dog.prototype.species Zacznij od konstruktora Dog, następnie pobierz jego właściwość prototype, będącą referencją do obiektu, który ma mieć właściwość species. 
+    // Referencja – wartość, która zawiera informacje o położeniu innej wartości w pamięci lub nośniku danych. Instancja (z łac. instantia) – pojedyncze wystąpienie niezależnego 
+    // kodu zgodnego z danym wzorcem. Najpopularniejszym przykładem jest instancjonowanie klas w programowaniu obiektowym [ważne pamiętajmy, że przykład ten raczej nie dotyczy JS], 
+    // czyli tworzenie obiektów (niezależnych bytów danej klasy, zajmujących określone miejsce w pamięci). Innym przykładem jest instancja danego programu, czyli wystąpienie w pamięci 
+    // komputera aktualnie wykonywanej sekwencji kodu komputerowego – utworzenie procesu. 
 
     //Dog - name: "Burek", breed: "mieszaniec", weight: 20 – to jest przykład instancji, czyli indywidualny zestaw cech konkretnego psa
 
     //A jeśli chodzi o metody, odpowiednie funkcje zapiszemy we właściwościach bark, run i wag prototypu.
 
-    Dog.prototype.bark = function () {
+    Dog.prototype.bark = function() {
 
         if (this.weight > 10) {
 
@@ -35,13 +39,13 @@
 
     };
 
-    Dog.prototype.run = function () {
+    Dog.prototype.run = function() {
 
         console.log("Biega!");
 
     };
 
-    Dog.prototype.wag = function () {
+    Dog.prototype.wag = function() {
 
         console.log("Merda ogonem!");
 
@@ -55,11 +59,14 @@
 
     console.log(fido.name); //Wyświetli się Burek
 
-    //Jeżeli chcemy aby np. Kieł szczekał inaczej, to po var spot (nie wiem dlaczego inaczej nie działa ale ustawianie w innych tzn. wcześniejszych miejscach powoduje, że nie działa – widocznie jedne działania przesłaniają drugie, oczywiście warto pamiętać, że wszelkie zmienne jest najlepiej umieszczać na początku przed funkcjami – jeżeli to zmienne globalne oraz na początku funkcji przy zmiennych lokalnych) wstawiamy np.:
+    // Jeżeli chcemy aby np. Kieł szczekał inaczej, to po var spot (nie wiem dlaczego inaczej nie działa ale ustawianie w innych 
+    // tzn. wcześniejszych miejscach powoduje, że nie działa – widocznie jedne działania przesłaniają drugie, oczywiście warto pamiętać, 
+    // że wszelkie zmienne jest najlepiej umieszczać na początku przed funkcjami – jeżeli to zmienne globalne oraz na początku funkcji 
+    // przy zmiennych lokalnych) wstawiamy np.:
 
     //wywołanie w console.log
 
-    spot.bark = function () {
+    spot.bark = function() {
 
         console.log(this.name + " szczeka HAU HAU!");
 
@@ -85,7 +92,7 @@
 
     //Poniżej dodajemy nową metodę - sit, do prototypu
 
-    Dog.prototype.sit = function () {
+    Dog.prototype.sit = function() {
 
         console.log(this.name + " wykonał siad.");
 
@@ -95,7 +102,7 @@
 
     Dog.prototype.sitting = false;
 
-    Dog.prototype.sit = function () {
+    Dog.prototype.sit = function() {
 
         if (this.sitting) {
 
@@ -161,7 +168,7 @@
 
     }
 
-    Game.prototype.play = function () {
+    Game.prototype.play = function() {
 
         // gracz bawi się grą.
 
@@ -173,11 +180,11 @@
 
     }
 
-    Game.prototype.unlock = function () {
+    Game.prototype.unlock = function() {
 
         if (this.level === 42) {
 
-            Robot.prototype.deployLaser = function () {
+            Robot.prototype.deployLaser = function() {
 
                 console.log("Robot " + this.name + " strzela do Ciebie z lasera!");
 
@@ -235,13 +242,13 @@
 
     Robot.prototype.errorMessage = "Wszystkie systemy sprawne.";
 
-    Robot.prototype.reportError = function () {
+    Robot.prototype.reportError = function() {
 
         console.log(this.name + " mówi " + this.errorMessage);
 
     };
 
-    Robot.prototype.spillWater = function () {
+    Robot.prototype.spillWater = function() {
 
         this.errorMessage = "Chyba mam zwarcie!"; //this.errorMessage sprawi, że później kiedy przypiszemy, któremuś z robotów metodę spillWater, właściwość errorMessage zostanie na stałe zapisana w instancji robota. Dlatego kiedy wywołujemy robota robby --- robby.spillWater(); --- to po wpisaniu console.log(robby.hasOwnProperty("errorMessage")); --- w konsoli pokaże się  >true<  bo dzięki metodzie >spillWater< instancja robby otrzymała już właściwość >errorMessage<
 
@@ -289,25 +296,25 @@
 
     ShowDog.prototype.league = "Sieciowice";
 
-    ShowDog.prototype.stack = function () {
+    ShowDog.prototype.stack = function() {
 
         console.log("Stoi i uważa!");
 
     };
 
-    ShowDog.prototype.bait = function () {
+    ShowDog.prototype.bait = function() {
 
         console.log("Prosi o smakołyk");
 
     };
 
-    ShowDog.prototype.gait = function (kind) {
+    ShowDog.prototype.gait = function(kind) {
 
         console.log("Trenuje " + kind + ".");
 
     };
 
-    ShowDog.prototype.groom = function () {
+    ShowDog.prototype.groom = function() {
 
         console.log("Czas pielgnacji sierści.");
 
@@ -395,7 +402,7 @@
 
     }
 
-    Dog.prototype.bark = function () {
+    Dog.prototype.bark = function() {
 
         if (this.weight > 10) {
 
@@ -409,13 +416,13 @@
 
     };
 
-    Dog.prototype.run = function () {
+    Dog.prototype.run = function() {
 
         console.log("Biega!");
 
     };
 
-    Dog.prototype.wag = function () {
+    Dog.prototype.wag = function() {
 
         console.log("Merda ogonem!");
 
@@ -423,7 +430,7 @@
 
     Dog.prototype.sitting = false;
 
-    Dog.prototype.sit = function () {
+    Dog.prototype.sit = function() {
 
         if (this.sitting) {
 
@@ -447,25 +454,25 @@
 
     ShowDog.prototype.league = "Sieciowice";
 
-    ShowDog.prototype.stack = function () {
+    ShowDog.prototype.stack = function() {
 
         console.log("Stoi i uważa!");
 
     };
 
-    ShowDog.prototype.bait = function () {
+    ShowDog.prototype.bait = function() {
 
         console.log("Prosi o smakołyk");
 
     };
 
-    ShowDog.prototype.gait = function (kind) {
+    ShowDog.prototype.gait = function(kind) {
 
         console.log(this.name + " trenuje " + kind + ".");
 
     };
 
-    ShowDog.prototype.groom = function () {
+    ShowDog.prototype.groom = function() {
 
         console.log("Czas pielęgnacji sierści dla " + this.name + ".");
 
@@ -477,7 +484,7 @@
 
     var spot = new Dog("Kieł", "chihuahua", 4);
 
-    spot.bark = function () {
+    spot.bark = function() {
 
         console.log(this.name + " szczeka HAU HAU!");
 
@@ -520,7 +527,7 @@
 
     }
 
-    Robot.prototype.toString = function () {
+    Robot.prototype.toString = function() {
 
         return this.name + " - robot, a jego właścicielem jest " + this.owner;
 
@@ -546,7 +553,7 @@
     //Stosowanie dziedziczenia do własnych celów…
     //Rozszerzanie wbudowanych obiektów
 
-    String.prototype.cliche = function () { //dodajemy do prototypu String metodę cliche
+    String.prototype.cliche = function() { //dodajemy do prototypu String metodę cliche
 
         var cliche = ["wygrać w cuglach", "był w kontakcie", "gwóźdź do trumny"]; //definiujemy zwroty, które nas interesują.
 
@@ -607,7 +614,7 @@
     //Zadanie
     //Napisz metodę o nazwie palindrome, która będzie zwracać wartość true, jeśli łańcuch znaków będzie palindromem, czyli będzie miał taką samą postać, kiedy będziemy go czytać od przodu oraz od tyłu. (Jedna uwaga: nie zaprzątaj sobie głowy wyrażeniami będącymi palindromami). Dodaj tę metodę do prototypu String, a następnie ją przetestuj. Poniżej rozwiązanie z książki.
 
-    String.prototype.palindrome = function () {
+    String.prototype.palindrome = function() {
 
         var len = this.length - 1; //Najpierw odczytujemy długość łańcucha znaków.
 
@@ -668,7 +675,7 @@
 
     //W tym przypadku najpierw przekształcamy słowo na tablicę pojedynczych liter, następnie zmieniamy kolejność wszystkich elementów tej tablicy, a w końcu łączymy jej wszystkie elementy, ponownie uzyskując jeden łańcuch znaków. Jeśli początkowy łańcuch będzie równy nowemu, oznacza to, że jest on palindromem. Zwróć uwagę, że musimy tu użyć metody valueOf, gdyż this jest obiektem, a nie łańcuchem znaków, takim jak zmienna r; gdybyśmy zatem nie użyli tej metody, porównywalibyśmy łańcuch znaków z obiektem, a one nie byłyby równe, nawet wtedy, gdyby this było palindromem.
 
-    String.prototype.palindromeAdv = function () {
+    String.prototype.palindromeAdv = function() {
 
         var r = this.split("").reverse().join("");
 
